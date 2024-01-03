@@ -14,8 +14,8 @@ import java.util.List;
 public class MemoController {
     private final MemoService memoService;
 
-    public MemoController(MemoRepository memoRepository) {
-        this.memoService = new MemoService(memoRepository);
+    public MemoController(MemoService memoService) {
+        this.memoService = memoService;
     }
 
     @PostMapping("/memos")
